@@ -1,0 +1,232 @@
+/* Colorful Base Styles */
+:root {
+  --rainbow-1: #FF6B6B;
+  --rainbow-2: #FFA3A3;
+  --rainbow-3: #FFD166;
+  --rainbow-4: #06D6A0;
+  --rainbow-5: #118AB2;
+  --rainbow-6: #073B4C;
+  --rainbow-7: #7209B7;
+}
+
+body {
+  font-family: 'Comic Neue', cursive, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* App Container */
+.app-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--rainbow-6);
+}
+
+/* Header Styles */
+.quiz-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, var(--rainbow-1), var(--rainbow-5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.quiz-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Progress Bar */
+.progress {
+  height: 15px;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border: 2px solid var(--rainbow-6);
+}
+
+.progress-bar {
+  background: linear-gradient(to right, var(--rainbow-4), var(--rainbow-5));
+  border-radius: 8px;
+}
+
+/* Question Card */
+.question-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 2px solid var(--rainbow-3);
+}
+
+.question-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.question-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--rainbow-6);
+  padding: 15px;
+  background: linear-gradient(to right, #f8f9fa, white);
+  border-radius: 10px 10px 0 0;
+}
+
+/* Answer Buttons */
+.answer-btn {
+  padding: 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Button States */
+.btn-outline-primary {
+  background-color: white;
+  color: var(--rainbow-5);
+  border: 2px solid var(--rainbow-5);
+}
+
+.btn-primary {
+  background: var(--rainbow-5);
+  color: white;
+}
+
+.btn-success {
+  background: var(--rainbow-4);
+  color: white;
+  animation: pulse 0.5s 2;
+}
+
+.btn-danger {
+  background: var(--rainbow-1);
+  color: white;
+  animation: shake 0.5s;
+}
+
+.btn-outline-secondary {
+  background-color: white;
+  color: #6c757d;
+  border: 2px solid #6c757d;
+}
+
+/* Result Page */
+.result-container {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  border: 3px dashed var(--rainbow-4);
+}
+
+.score-display {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  background: linear-gradient(to right, var(--rainbow-7), var(--rainbow-1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feedback {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.perfect {
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  color: white;
+}
+
+.good {
+  background: linear-gradient(to right, #ffb347, #ffcc33);
+  color: white;
+}
+
+.practice {
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: white;
+}
+
+/* Score History */
+.score-history {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  border: 2px solid var(--rainbow-2);
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 10px;
+  border-left: 5px solid var(--rainbow-5);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.score-date {
+  color: var(--rainbow-6);
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+@keyframes confetti {
+  0% { transform: translateY(0) rotate(0); opacity: 1; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .quiz-title {
+    font-size: 2rem;
+  }
+  
+  .answer-btn {
+    padding: 12px;
+  }
+}

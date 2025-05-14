@@ -1,0 +1,26 @@
+/* Confetti effect for perfect scores */
+.perfect-score::after {
+  content: "🎉";
+  position: absolute;
+  animation: confetti 2s ease-out forwards;
+}
+
+/* Button hover effects */
+.answer-btn:hover:not(:disabled) {
+  transform: scale(1.03) translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Rainbow border animation */
+@keyframes rainbow-border {
+  0% { border-color: var(--rainbow-1); }
+  20% { border-color: var(--rainbow-2); }
+  40% { border-color: var(--rainbow-3); }
+  60% { border-color: var(--rainbow-4); }
+  80% { border-color: var(--rainbow-5); }
+  100% { border-color: var(--rainbow-7); }
+}
+
+.app-container {
+  animation: rainbow-border 8s infinite alternate;
+}
